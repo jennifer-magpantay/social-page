@@ -1,0 +1,8 @@
+@use "../helpers/mixins" as *;
+@use "../helpers/variables" as *;
+
+.header {
+    @include display-flex(center, center);
+    width: 100%;
+    height: 90px;
+}

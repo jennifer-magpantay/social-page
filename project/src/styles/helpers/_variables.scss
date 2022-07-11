@@ -1,0 +1,34 @@
+// Colors
+$color-accent: #f59e0b;
+$color-primary: #075985;
+
+$color-background: #f1f5f9;
+$color-surface: #f8fafc;
+
+$color-text-title: #0f172a;
+$color-text-body: #000000;
+$color-text-body-lg: #ffffff;
+$color-text-caption: #475569;
+
+// Font size 14/16/20/24/32/40/48
+$text-sm: clamp(0.75rem, 0.7106rem + 0.1826vw, 0.875rem); //12-14
+$text-regular: clamp(0.875rem, 0.8356rem + 0.1826vw, 1rem); //14-16
+$text-md: clamp(1.125rem, 1.0856rem + 0.1826vw, 1.25rem); //18-20
+$text-1xlg: clamp(1.375rem, 1.3356rem + 0.1826vw, 1.5rem); //22-24
+$text-2xlg: clamp(1.625rem, 1.5068rem + 0.5479vw, 2rem); //26-32
+$text-3xlg: clamp(2.125rem, 2.0068rem + 0.5479vw, 2.5rem); //34-40
+$text-4xlg: clamp(2.625rem, 2.5068rem + 0.5479vw, 3rem); //42-48
+
+// Font weight
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+
+// Miscelaneous
+$opacity-black-20: rgba(0, 0, 0, 0.2);
+$opacity-lg-10: rgba(255, 255, 255, 0.1);
+$opacity-lg-50: rgba(255, 255, 255, 0.5);
+
+$overlay: rgba(0, 0, 0, 0.4);
