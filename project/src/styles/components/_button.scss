@@ -1,0 +1,14 @@
+@use "../helpers/mixins" as *;
+@use "../helpers/variables" as *;
+
+.button {
+    @include font-setup($color-text-body-lg, $text-regular, $medium, uppercase);
+    padding: 0.5rem 1.5rem;
+    background-color: $color-primary;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        opacity: 0.75;
+    }
+}

@@ -1,0 +1,14 @@
+@use "../helpers/mixins" as *;
+@use "../helpers/variables" as *;
+
+.button--icon {
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        opacity: 0.75;
+    }
+}

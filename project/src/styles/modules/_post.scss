@@ -1,0 +1,41 @@
+@use "../helpers/mixins" as *;
+@use "../helpers/variables" as *;
+
+.post {
+    height: 100%;
+    flex: 4;
+    margin: 01rem 8.33% 01rem 01rem;
+    padding: 1.5rem;
+    background-color: $color-surface;
+    border: 01px solid $color-gray;
+    border-radius: 04px;
+
+    &--header {
+        @include display-flex(center, "");
+        gap: 01rem;
+    }
+
+    &--body {
+        margin: 02rem 0;
+    }
+
+    &--footer {
+        &-counters {
+            @include display-flex(center, "");
+            gap: 0.5rem;
+
+            &-span {
+                @include font-setup($color-text-caption, $text-sm, $regular, "");
+                margin-right: 01rem;
+            }
+        }
+
+        &-comment {
+            width: 100%;
+            min-height: 100px;
+            margin-top: 01rem;
+            background-color: $color-background;
+            border-radius: 4px;
+        }
+    }
+}

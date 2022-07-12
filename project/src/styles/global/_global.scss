@@ -16,9 +16,20 @@ body {
     background-color: $color-background;
 }
 
+p {
+    @include font-setup($color-text-body, $text-regular, $regular, "");
+}
+
 // Global classes
 .container--row {
     @include display-flex(center, flex-start);
+}
+
+.container--flex {
+    width: 100%;
+    min-height: calc(100vh - 90px );
+    display: flex;
+    gap: 0.5rem;
 }
 
 .line-break::after {

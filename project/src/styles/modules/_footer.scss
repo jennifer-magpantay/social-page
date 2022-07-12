@@ -1,13 +1,14 @@
 @use "../helpers/mixins" as *;
 @use "../helpers/variables" as *;
 
-.header {
+.footer {
     @include display-flex(center, center);
     width: 100%;
     height: 90px;
-    position: sticky;
-    gap: 01rem;
     padding: 01rem 8.33%;
-    background-color: $color-surface;
-    border-bottom: 01px solid $color-gray-lg;
+    background-color: $color-background-dk;
+
+    &--text {
+        @include font-setup($color-text-body-lg, $text-regular, $regular, "");
+    }
 }

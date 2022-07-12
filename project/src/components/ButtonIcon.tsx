@@ -4,9 +4,9 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
 }
 
-export const Button = ({ children, ...props }: Props) => {
+export const ButtonIcon = ({ children, ...props }: Props) => {
   return (
-    <button className="button" {...props}>
+    <button className="button--icon" {...props}>
       {children}
     </button>
   );

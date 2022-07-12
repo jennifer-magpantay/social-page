@@ -1,0 +1,22 @@
+@use "../helpers/mixins" as *;
+@use "../helpers/variables" as *;
+
+.user {
+    &--name {
+        @include font-setup($color-text-title, $text-md, $medium, capitilize);
+        display: block;
+    }
+
+    &--role {
+        @include font-setup($color-text-body, $text-regular, $regular, "");
+    }
+
+    &--bio {
+        @include font-setup($color-text-caption, $text-sm, $light, "");
+    }
+
+    &--location {
+        @include display-flex(center, center);
+        gap: 0.25rem;
+    }
+}
