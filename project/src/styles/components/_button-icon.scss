@@ -2,13 +2,15 @@
 @use "../helpers/variables" as *;
 
 .button--icon {
-    background-color: transparent;
-    border: none;
-    outline: none;
+    @include button;
+    @include display-flex(center, center);
+    gap: 0.5rem;
+ 
+    &.primary {
+        @include button-primary;
+    }
 
-    &:hover,
-    &:focus {
-        cursor: pointer;
-        opacity: 0.75;
+    &.secondary {
+        @include button-secondary;
     }
 }

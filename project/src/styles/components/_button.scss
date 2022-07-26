@@ -2,12 +2,23 @@
 @use "../helpers/variables" as *;
 
 .button {
-    @include font-setup($color-text-body-lg, $text-regular, $medium, uppercase);
-    padding: 0.5rem 1.5rem;
-    background-color: $color-primary;
+    @include button;
 
-    &:hover,
-    &:focus {
+    &.primary {
+        @include button-primary;
+    }
+
+    &.secondary {
+        @include button-secondary;
+    }
+
+    &:disabled {
+        cursor: none;
+        pointer-events: none;
+    }
+
+    &:not(:disabled):hover,
+    &:not(:disabled):focus {
         cursor: pointer;
         opacity: 0.75;
     }

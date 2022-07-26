@@ -1,0 +1,11 @@
+.icon-button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+}

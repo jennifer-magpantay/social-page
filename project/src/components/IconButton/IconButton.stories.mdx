@@ -1,0 +1,56 @@
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import { IconButton } from "./IconButton";
+
+import { ThumbsUp, ChatCentered } from "phosphor-react";
+
+<Meta
+  title="Components/Icon Button"
+  argTypes={{ onClick: { action: "clicked" } }}
+  component={IconButton}
+/>
+
+export const Template = (args) => <IconButton {...args} />;
+
+# Icon Button 
+
+Differently of `ButtonWithIcon`, which receives an icon and text as children, the `IconButton` receives only an icon as child. 
+
+These components have their development based on the library [Phosphor Icons](https://phosphoricons.com/).
+
+For each implementation, the related component of the library must be imported into the application.
+
+To get the code snippet from `Canvas`:
+
+## Button Like
+
+<Canvas>
+  <Story
+    name="Like Button"
+    args={{
+      type: "button",
+      label: "Like button",
+      icon: (
+        <ThumbsUp size={24} weight="bold" color="#475569" aria-hidden={true} />
+      ),
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Button Comment
+
+<Canvas>
+  <Story
+    name="Comment Button"
+    args={{
+      type: "button",
+      label: "Comment button",
+      icon: (
+        <ChatCentered size={24} weight="bold" color="#475569" aria-hidden={true} />
+      ),
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

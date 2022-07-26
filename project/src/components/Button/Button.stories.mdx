@@ -1,0 +1,94 @@
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import { Button } from "./Button";
+
+<!-- create Meta title -->
+
+<Meta
+  title="Components/Button"
+  argTypes={{ onClick: { action: "clicked" } }}
+  component={Button}
+/>
+
+<!-- create Template -->
+
+export const Template = (args) => <Button {...args} />;
+
+# Button
+
+Let's define the stories for our `Button` component:
+
+<!-- Add stories -->
+
+## Primary Button
+
+The Primary Button is the main button of the application, getting user attention for an action.
+
+To get a code snippet from `Canvas`:
+
+<Canvas>
+  <Story
+    name="Primary"
+    args={{
+      type: "button",
+      variant: "primary",
+      children: "Primary",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Secondary Button
+
+The Secondary Button could be used alongside the primary button or as itself.
+
+As its name suggests, it calls the user attention for an action, but not as relevant as the Primary Button.
+
+<Canvas>
+  <Story
+    name="Secondary"
+    args={{
+      type: "button",
+      variant: "secondary",
+      children: "Secondary",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Disabled Button
+
+If the button is set as disabled, if should looks like the following:
+
+<Canvas>
+  <Story
+    name="Primary Disabled"
+    args={{
+      type: "button",
+      variant: "primary",
+      isDisabled: "true",
+      children: "Primary",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Secondary Disabled"
+    args={{
+      type: "button",
+      variant: "secondary",
+      isDisabled: "true",
+      children: "Secondary",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Arguments
+
+<ArgsTable of={Button} />

@@ -1,3 +1,5 @@
+@use "../helpers/variables" as *;
+
 @mixin display-flex($items, $justify) {
     display: flex;
     align-items: #{$items};
@@ -11,6 +13,51 @@
     text-transform: #{$transform};
 }
 
-@mixin opacity(){
-    
+@mixin button {
+    @include font-setup("", $text-regular, $medium, uppercase);
+    padding: 0.5rem 1.5rem;
+    border: 0;
+    border-radius: 2px;
+    outline: none;
+
+    &:disabled {
+        cursor: none;
+        pointer-events: none;
+    }
+
+    &:not(:disabled):hover,
+    &:not(:disabled):focus {
+        cursor: pointer;
+        opacity: 0.75;
+    }
+}
+
+@mixin button-primary {
+    background-color: $color-primary;
+    border: 01px solid $color-primary;
+    color: $color-text-body-lg;
+
+    &:disabled {
+        background-color: $color-gray;
+        border: 01px solid $color-gray;
+        color: $color-text-body-lg;
+    }
+}
+
+@mixin button-secondary {
+    background-color: transparent;
+    border: 01px solid $color-primary;
+    color: $color-primary;
+    transition: all 0.5s ease;
+
+    &:disabled {
+        border: 01px solid $color-gray;
+        color: $color-gray;
+    }
+
+    &:not(:disabled):hover,
+    &:not(:disabled):focus {
+        background-color: $color-primary;
+        color: $color-text-body-lg;
+    }
 }

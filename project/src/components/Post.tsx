@@ -2,9 +2,10 @@ import { useState } from "react";
 import { ThumbsUp, ChatCentered } from "phosphor-react";
 
 import { Avatar } from "./Avatar";
-import { ButtonIcon } from "./ButtonIcon";
+import { ButtonWithIcon } from "./ButtonWithIcon/ButtonWithIcon";
 import { User } from "./User";
 import { formatCounter } from "../helpers/formatCounter";
+import { IconButton } from "./IconButton/IconButton";
 
 export const Post = () => {
   const [counter, setCounter] = useState(0);
@@ -19,6 +20,13 @@ export const Post = () => {
 
   return (
     <main className="post">
+      <IconButton
+        label="like button"
+        Icon={ThumbsUp}
+        size={24}
+        weight="bold"
+        color="#965872"
+      />
       <div className="post--header">
         <Avatar
           src="https://avatars.githubusercontent.com/u/56962997?v=4"
@@ -37,16 +45,33 @@ export const Post = () => {
       </div>
       <div className="post--footer">
         <div className="post--footer-counters">
-          <ButtonIcon onClick={handleCounterLike}>
-            <ThumbsUp size={24} weight="bold" color="#475569" />
-          </ButtonIcon>
+          <IconButton
+            label="Like"
+            icon={
+              <ThumbsUp
+                size={24}
+                weight="bold"
+                color="#475569"
+                aria-hidden={true}
+              />
+            }
+            onClick={handleCounterLike}
+          />
           <span className="post--footer-span">
             {counter === 0 ? "" : formatCounter(counter)}
           </span>
 
-          <ButtonIcon>
-            <ChatCentered size={24} weight="bold" color="#475569" />
-          </ButtonIcon>
+          <IconButton
+            label="Comment"
+            icon={
+              <ChatCentered
+                size={24}
+                weight="bold"
+                color="#475569"
+                aria-hidden={true}
+              />
+            }
+          />
           <span className="post--footer-span">01</span>
         </div>
 
